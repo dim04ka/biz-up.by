@@ -1,0 +1,332 @@
+main {
+    background-image: url("../src/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main {
+    padding: 20px 0;
+}
+
+.main__logo {
+        width: 70px;
+        height: 30px;
+        background-image: url("../src/img/logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain
+    }
+
+@media( min-width: 768px) {
+
+    .main__logo {
+            width: 150px;
+            height: 80px
+    }
+        }
+
+.main__title {
+        padding-top: 80px;
+        font-weight: bold;
+        font-size: 1.5625rem;
+        letter-spacing: .03em;
+        text-align: center;
+        color: #F5F108;
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 700px;
+        margin: 0 auto
+    }
+
+@media(min-width: 768px) {
+
+    .main__title {
+            font-size: 2.5rem;
+            padding-top: 120px
+    }
+        }
+
+.game{
+    margin-bottom: 100px;
+}
+
+.game__title {
+        padding-top: 30px;
+        font-weight: normal;
+        font-size: 1.5625rem;
+        letter-spacing: .03em;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 30px
+    }
+
+@media(min-width: 768px) {
+
+    .game__title {
+            font-size: 2rem;
+            padding-top: 50px
+    }
+        }
+
+.game__link {
+        width: 200px;
+        height: 50px;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-decoration: none;
+        color: #1D1D1B;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-family: Determination;
+        line-height: 2.8125rem;
+        transition: all .3s
+    }
+
+@media(min-width: 768px) {
+
+    .game__link {
+            font-size: 1.375rem;
+            width: 210px;
+            padding: 0 10px
+    }
+        }
+
+.game__link-no {
+            background-image: url("../src/img/btn1.svg");
+        }
+
+.game__link-yes {
+            background-image: url("../src/img/btn2.svg");
+        }
+
+.game__link:hover {
+            transform: scale(1.1);
+        }
+
+.footer {
+    padding: 20px 0;
+    background: #D8D8D8;
+
+}
+
+@media(min-width: 768px) {
+
+    .footer__nav {
+            display: flex;
+            justify-content: space-between
+    }
+        }
+
+.footer .links {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+    }
+
+.footer .links a span {
+                width: 45px;
+                height: 35px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+.footer .links-you {
+            background-image: url("../src/img/you.svg");
+        }
+
+.footer .links-face {
+            background-image: url("../src/img/face.svg");
+        }
+
+.footer .links-vk {
+            background-image: url("../src/img/vk.svg");
+        }
+
+.footer .links-inst {
+            background-image: url("../src/img/inst.svg");
+        }
+
+.footer__adress  {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+.footer__email {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+.footer__email a {
+            text-decoration: none;
+            color: #000;
+            
+        }
+
+.footer__copyr {
+        text-align: center;
+    }
+
+.modal {
+    display: none;
+}
+
+.modal__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #45434375;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+.modal__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* z-index: 6; */
+    }
+
+.modal form {
+        background-image: url("../src/img/black.svg");
+        width: 300px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 300px;
+        height: 300px;
+        z-index: 10;
+        position: relative;
+        padding: 20px 50px
+    }
+
+@media(min-width: 768px) {
+
+    .modal form {
+            width: 435px;
+            height: 390px;
+            background-image: url("../src/img/black2.svg")
+    }
+        }
+
+.modal form input {
+            position: relative;
+            z-index: 9;
+        }
+
+.modal form::after {
+            content: "";
+            width: 300px;
+            height: 300px;
+            background-image: url(../src/img/white.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            top: 0
+        }
+
+@media(min-width: 768px) {
+
+        .modal form::after {
+                width: 434px;
+                height: 371px;
+                background-image: url("../src/img/white2.svg");
+                top: 8px;
+                background-size: contain
+        }
+            }
+
+.content__title {
+        font-size: 1rem;
+        color: #000;
+        opacity: .6;
+        position: relative;
+        z-index: 5;
+        padding: 10px 0 5px;
+    }
+
+.content__input {
+        position: relative;
+        z-index: 5;
+        margin-bottom: 10px;
+        font-family: Determination
+    }
+
+@media(min-width: 768px) {
+
+    .content__input {
+            margin-bottom: 25px
+    }
+        }
+
+.content__input input {
+            width: 100%;
+            border: 1px solid #DEDEDE;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            padding: 5px 10px;
+            font-family: Determination;
+        }
+
+.content__input-btn input{
+            background: rgba(253, 221, 1, .4);
+            cursor: pointer;
+            
+        }
+
+.reviews {
+    display: none;
+    color: green;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+@font-face {
+    font-family: Determination;
+    src: url("../fonts/Determination2.otf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Determination,"Helvetica Neue",Helvetica,sans-serif;
+
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto
+}
+
+@media (max-width: 1180px) {
+
+.container {
+        padding-left: 15px;
+        padding-right: 15px
+}
+    }
+
