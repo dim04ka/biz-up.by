@@ -204,9 +204,18 @@ main {
 .footer .links {
         display: flex;
         justify-content: space-around;
-        margin-bottom: 20px;
+        margin-bottom: 20px
 
     }
+
+@media(min-width: 1200px){
+
+    .footer .links {
+            width: 30%;
+            justify-content: flex-start
+
+    }
+        }
 
 .footer .links a span {
                 width: 45px;
@@ -214,8 +223,15 @@ main {
                 display: inline-block;
                 background-repeat: no-repeat;
                 background-size: contain;
-                background-position: center;
+                background-position: center
             }
+
+@media(min-width: 1200px){
+
+            .footer .links a span {
+                    margin-right: 15px
+            }
+                }
 
 .footer .links-you {
             background-image: url("../src/img/you.svg");
@@ -241,7 +257,8 @@ main {
 @media(min-width: 1200px){
 
     .footer__adress  {
-            font-size: 1.875rem
+            font-size: 1.875rem;
+            width: 33%
     }
         }
 
@@ -259,7 +276,8 @@ main {
 @media(min-width: 1200px){
 
         .footer__email a {
-                font-size: 1.875rem
+                font-size: 1.875rem;
+                width: 30%
             
         }
             }
@@ -390,6 +408,7 @@ main {
             font-family: Determination;
             border-bottom: 1px solid #A2A2A3;
             height: 25px;
+            padding-left: 10px;
         }
 
 .content__input-btn  {
@@ -408,7 +427,9 @@ main {
                 cursor: pointer;
                 max-width: 255px;
                 color: #FFF;
-                font-size: 1rem
+                font-size: 1rem;
+                background-color: transparent;
+                border: none
             }
 
 @media( min-width: 1024px) {
