@@ -306,21 +306,23 @@ main {
 
         &::after {
             content: "";
-            width: 300px;
-            height: 300px;
+            width: 290px;
+            height: 290px;
             background-image: url(../src/img/white.svg);
             background-repeat: no-repeat;
             background-position: center;
+            background-size: contain;
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 5px;
+            top: 5px;
 
             @media(min-width: 768px) {
-                width: 434px;
-                height: 371px;
+                width: 455px;
+                height: 385px;
                 background-image: url("../src/img/white2.svg");
-                top: 8px;
+                top: 2px;
                 background-size: contain;
+                left: -10px;
             }
         }
     }
@@ -354,15 +356,18 @@ main {
             font-size: 14px;
             padding: 5px 10px;
             font-family: Determination;
+            border-bottom: 1px solid #A2A2A3;
         }
 
         &-btn  {
             text-align: right;
 
             input {
-                background: rgba(253, 221, 1, .4);
+                background: #FF8D00;
                 cursor: pointer;
                 max-width: 255px;
+                color: #FFF;
+                font-size: 16px;
             }
             
         }
