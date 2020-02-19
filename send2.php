@@ -52,7 +52,8 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 if (mail($nameSite ,"Новая заявка", $message,$headers))
  {     
     $result = array(
-    	'name' => $_POST["fio"]
+      'name' => $_POST["fio"],
+      'site' => $nameSite
     );
     echo json_encode($result);
 } else {

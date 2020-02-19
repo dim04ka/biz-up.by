@@ -32,6 +32,12 @@ main {
         max-width: 700px;
         margin: 0 auto;
 
+
+        @media(max-width: 480px) {
+            padding-top: 20px;
+            line-height: 25px;
+        }
+
         @media(min-width: 768px) {
             font-size: 40px;
             padding-top: 120px;
@@ -80,16 +86,103 @@ main {
 
         &-no {
             background-image: url("../src/img/btn1.svg");
+            animation: shadow  1.5s infinite ease-in-out;
+
+            &:hover {
+                
+            }
         }
 
         &-yes {
             background-image: url("../src/img/btn2.svg");
+            animation: shadow2  1.5s infinite ease-in-out;
+
+            &::before {
+                content: "";
+                width: 400px;
+                height: 100px;
+                background-image: url("../src/img/consult.svg");
+            }
         }
 
         &:hover {
-            transform: scale(1.1);
+            animation-play-state: paused;
         }
     }
+
+    &__wrap {
+        position: relative;
+
+        &-brif {
+
+            @media(min-width: 768px) {
+                
+                &::after {
+                    opacity: 0;
+                    content: "";
+                    width: 170px;
+                    height: 60px;
+                    background-image: url(../src/img/brif.svg);
+                    background-position: center;
+                    background-size: contain;
+                    position: absolute;
+                    top: -40px;
+                    left: 50%;
+                    transform: translateX(125px);
+                    transition: all .3s;
+                }
+            }
+
+            &:hover {
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+        }
+
+        &-consult {
+
+            @media(min-width: 768px) {
+
+                &::after {
+                    opacity: 0;
+                    content: "";
+                    width: 250px;
+                    height: 60px;
+                    background-image: url(../src/img/consult.svg);
+                    background-position: center;
+                    background-size: contain;
+                    position: absolute;
+                    top: -30px;
+                    left: 50%;
+                    transform: translateX(-380px);
+                    transition: all .3s;
+                }
+            }
+
+            &:hover {
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes shadow {
+    from {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    to {transform: scale(1);}
+}
+
+@keyframes shadow2 {
+    from {transform: scale(1.2);}
+    50% {transform: scale(1);}
+    to {transform: scale(1.2);}
 }
 
 .footer {
@@ -263,9 +356,14 @@ main {
             font-family: Determination;
         }
 
-        &-btn input{
-            background: rgba(253, 221, 1, .4);
-            cursor: pointer;
+        &-btn  {
+            text-align: right;
+
+            input {
+                background: rgba(253, 221, 1, .4);
+                cursor: pointer;
+                max-width: 255px;
+            }
             
         }
     }

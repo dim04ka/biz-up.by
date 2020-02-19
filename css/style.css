@@ -37,6 +37,14 @@ main {
         margin: 0 auto
     }
 
+@media(max-width: 480px) {
+
+    .main__title {
+            padding-top: 20px;
+            line-height: 1.5625rem
+    }
+        }
+
 @media(min-width: 768px) {
 
     .main__title {
@@ -94,15 +102,88 @@ main {
 
 .game__link-no {
             background-image: url("../src/img/btn1.svg");
+            animation: shadow  1.5s infinite ease-in-out
         }
+
+.game__link-no:hover {
+                
+            }
 
 .game__link-yes {
             background-image: url("../src/img/btn2.svg");
+            animation: shadow2  1.5s infinite ease-in-out
         }
 
+.game__link-yes::before {
+                content: "";
+                width: 400px;
+                height: 100px;
+                background-image: url("../src/img/consult.svg");
+            }
+
 .game__link:hover {
-            transform: scale(1.1);
+            animation-play-state: paused;
         }
+
+.game__wrap {
+        position: relative;
+    }
+
+@media(min-width: 768px) {
+                
+                .game__wrap-brif::after {
+                    opacity: 0;
+                    content: "";
+                    width: 170px;
+                    height: 60px;
+                    background-image: url(../src/img/brif.svg);
+                    background-position: center;
+                    background-size: contain;
+                    position: absolute;
+                    top: -40px;
+                    left: 50%;
+                    transform: translateX(125px);
+                    transition: all .3s;
+                }
+            }
+
+.game__wrap-brif:hover::after {
+                    opacity: 1;
+                }
+
+@media(min-width: 768px) {
+
+                .game__wrap-consult::after {
+                    opacity: 0;
+                    content: "";
+                    width: 250px;
+                    height: 60px;
+                    background-image: url(../src/img/consult.svg);
+                    background-position: center;
+                    background-size: contain;
+                    position: absolute;
+                    top: -30px;
+                    left: 50%;
+                    transform: translateX(-380px);
+                    transition: all .3s;
+                }
+            }
+
+.game__wrap-consult:hover::after {
+                    opacity: 1;
+                }
+
+@keyframes shadow {
+    from {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    to {transform: scale(1);}
+}
+
+@keyframes shadow2 {
+    from {transform: scale(1.2);}
+    50% {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
 
 .footer {
     padding: 20px 0;
@@ -280,11 +361,16 @@ main {
             font-family: Determination;
         }
 
-.content__input-btn input{
-            background: rgba(253, 221, 1, .4);
-            cursor: pointer;
+.content__input-btn  {
+            text-align: right;
             
         }
+
+.content__input-btn input {
+                background: rgba(253, 221, 1, .4);
+                cursor: pointer;
+                max-width: 255px;
+            }
 
 .reviews {
     display: none;
