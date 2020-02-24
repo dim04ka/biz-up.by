@@ -25,22 +25,27 @@ main {
         padding-top: 80px;
         font-weight: bold;
         font-size: 25px;
-        letter-spacing: .03em;
+        letter-spacing: 0;
         text-align: center;
         color: #F5F108;
-        font-family: Arial, Helvetica, sans-serif;
         max-width: 700px;
         margin: 0 auto;
+        letter-spacing: 10px;
+        
 
 
         @media(max-width: 480px) {
             padding-top: 20px;
-            line-height: 25px;
+            line-height: 35px;
         }
 
         @media(min-width: 768px) {
             font-size: 40px;
             padding-top: 120px;
+        }
+
+        @media(min-width: 1200px) {
+            font-size: 55px;
         }
     }
 }
@@ -61,6 +66,9 @@ main {
             font-size: 32px;
             padding-top: 50px;
         }
+        @media(min-width: 1200px) {
+            font-size: 46px;
+        }
     }
 
     &__link {
@@ -77,6 +85,7 @@ main {
         font-family: Determination;
         line-height: 45px;
         transition: all .3s;
+        cursor: pointer;
 
         @media(min-width: 768px) {
             font-size: 22px;
@@ -247,7 +256,7 @@ main {
         margin-bottom: 20px;
 
         @media(min-width: 1200px){
-            font-size: 30px;
+            font-size: 28px;
             width: 33%;
         }
     }
@@ -261,19 +270,89 @@ main {
             color: #000;
 
             @media(min-width: 1200px){
-                font-size: 30px;
+                font-size: 26px;
                 width: 30%;
             }
             
         }
+
+        @media(min-width: 1200px){
+            width: 30%;
+        }
     }
 
     &__copyr {
-        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
         @media(min-width: 1200px){
-            font-size: 26px;
+            flex-direction: row;
+            justify-content: flex-start;
         }
+
+        & .copyr__tel {
+
+            a {
+                text-decoration: none;
+                color: #000;
+                font-size: 20px;
+
+                @media(min-width: 1200px){
+                    font-size: 26px;
+                }
+            }
+        }
+
+        & .copyr__text {
+            color: #000;
+            font-size: 14px;
+
+            @media(min-width: 1200px){
+                font-size: 20px;
+                padding-right: 105px;
+            }
+        }
+
+        & .copyr__icon {
+
+            @media(min-width: 1200px) {
+                padding-left: 25px;
+                padding-right: 230px;
+            }
+
+            a {
+
+                span {
+                    width: 45px;
+                    height: 35px;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+    
+                    @media(min-width: 1200px){
+                        margin-right: 15px;
+                    }
+                }
+            }
+    
+            &-viber {
+                background-image: url("../src/img/viber.svg");
+            }
+
+            &-whatsapp {
+                background-image: url("../src/img/whatsapp.svg");
+            }
+
+            &-teleg {
+                background-image: url("../src/img/teleg.svg");
+            }
+
+        }
+
     }
 
 }
@@ -421,9 +500,13 @@ main {
 
 .reviews {
     display: none;
-    color: green;
     position: relative;
     z-index: 5;
-    text-align: center;
-    font-size: 28px;
+    text-align: left;
+    font-size: 18px;
+    color: rgba(5, 5, 5, .79);
+
+    @media(min-width: 1200px) {
+        font-size: 28px;
+    }
 }

@@ -29,19 +29,19 @@ main {
         padding-top: 80px;
         font-weight: bold;
         font-size: 1.5625rem;
-        letter-spacing: .03em;
+        letter-spacing: 0;
         text-align: center;
         color: #F5F108;
-        font-family: Arial, Helvetica, sans-serif;
         max-width: 700px;
-        margin: 0 auto
+        margin: 0 auto;
+        letter-spacing: 0.625rem
     }
 
 @media(max-width: 480px) {
 
     .main__title {
             padding-top: 20px;
-            line-height: 1.5625rem
+            line-height: 2.1875rem
     }
         }
 
@@ -50,6 +50,13 @@ main {
     .main__title {
             font-size: 2.5rem;
             padding-top: 120px
+    }
+        }
+
+@media(min-width: 1200px) {
+
+    .main__title {
+            font-size: 3.4375rem
     }
         }
 
@@ -75,6 +82,13 @@ main {
     }
         }
 
+@media(min-width: 1200px) {
+
+    .game__title {
+            font-size: 2.875rem
+    }
+        }
+
 .game__link {
         width: 200px;
         height: 50px;
@@ -88,7 +102,8 @@ main {
         margin-bottom: 20px;
         font-family: Determination;
         line-height: 2.8125rem;
-        transition: all .3s
+        transition: all .3s;
+        cursor: pointer
     }
 
 @media(min-width: 768px) {
@@ -257,7 +272,7 @@ main {
 @media(min-width: 1200px){
 
     .footer__adress  {
-            font-size: 1.875rem;
+            font-size: 1.75rem;
             width: 33%
     }
         }
@@ -276,22 +291,99 @@ main {
 @media(min-width: 1200px){
 
         .footer__email a {
-                font-size: 1.875rem;
+                font-size: 1.625rem;
                 width: 30%
             
         }
             }
 
+@media(min-width: 1200px){
+
+    .footer__email {
+            width: 30%
+    }
+        }
+
 .footer__copyr {
-        text-align: center
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center
+
     }
 
 @media(min-width: 1200px){
 
     .footer__copyr {
-            font-size: 1.625rem
+            flex-direction: row;
+            justify-content: flex-start
+
     }
         }
+
+.footer__copyr .copyr__tel a {
+                text-decoration: none;
+                color: #000;
+                font-size: 1.25rem
+            }
+
+@media(min-width: 1200px){
+
+            .footer__copyr .copyr__tel a {
+                    font-size: 1.625rem
+            }
+                }
+
+.footer__copyr .copyr__text {
+            color: #000;
+            font-size: 0.875rem
+        }
+
+@media(min-width: 1200px){
+
+        .footer__copyr .copyr__text {
+                font-size: 1.25rem;
+                padding-right: 105px
+        }
+            }
+
+@media(min-width: 1200px) {
+
+        .footer__copyr .copyr__icon {
+                padding-left: 25px;
+                padding-right: 230px
+
+        }
+            }
+
+.footer__copyr .copyr__icon a span {
+                    width: 45px;
+                    height: 35px;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center
+                }
+
+@media(min-width: 1200px){
+
+                .footer__copyr .copyr__icon a span {
+                        margin-right: 15px
+                }
+                    }
+
+.footer__copyr .copyr__icon-viber {
+                background-image: url("../src/img/viber.svg");
+            }
+
+.footer__copyr .copyr__icon-whatsapp {
+                background-image: url("../src/img/whatsapp.svg");
+            }
+
+.footer__copyr .copyr__icon-teleg {
+                background-image: url("../src/img/teleg.svg");
+            }
 
 .modal {
     display: none;
@@ -443,12 +535,19 @@ main {
 
 .reviews {
     display: none;
-    color: green;
     position: relative;
     z-index: 5;
-    text-align: center;
-    font-size: 1.75rem;
+    text-align: left;
+    font-size: 1.125rem;
+    color: rgba(5, 5, 5, .79)
 }
+
+@media(min-width: 1200px) {
+
+.reviews {
+        font-size: 1.75rem
+}
+    }
 
 @font-face {
     font-family: Determination;
