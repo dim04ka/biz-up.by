@@ -4,12 +4,47 @@ var jQuery = require('jquery');
 
 (function($){
 
+    //hover btn 
+    $('.game__link-no span').mouseenter(function(){
+        $('.game__help-no').css('opacity','1')
+        //$('.game__link span').css('animation-play-state','paused')
 
-    $('.game__link-no').click(function(){
+    })
+
+    $('.game__link-no span').mouseleave(function(){
+        $('.game__help-no').css('opacity','0')
+       // $('.game__link span').css('animation-play-state','running')
+
+    })
+
+
+    $('.game__link-yes span').mouseenter(function(){
+        $('.game__help-yes').css('opacity','1')
+
+    })
+
+    $('.game__link-yes span').mouseleave(function(){
+        $('.game__help-yes').css('opacity','0')
+        
+    })
+
+
+    //btn form reviews
+    $('.reviews input').click(function(){
+        $('.reviews').css('display','none')
+        $('.content__input').css('display','block')
+        $('.modal').css('display','none')
+    })
+
+
+    
+
+
+    $('.game__link-no span').click(function(){
         $('.modal').css('display','block');
         $('.content-site').val('sfyprojects@gmail.com')
     })
-    $('.game__link-yes').click(function(){
+    $('.game__link-yes span').click(function(){
         $('.modal').css('display','block');
         $('.content-site').val('project.bizup@gmail.com')
     })

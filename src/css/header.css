@@ -71,7 +71,7 @@ main {
         }
     }
 
-    &__link {
+    &__link span {
         width: 200px;
         height: 50px;
         display: block;
@@ -92,30 +92,76 @@ main {
             width: 210px;
             padding: 0 10px;
         }
+    }
 
-        &-no {
+    &__link {
+        position: relative;
+    }
+
+    &__link-no {
+
+        .game__help-no {
+            content: "";
+            width: 225px;
+            height: 80px;
+            background-image: url("../src/img/brif.svg");
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: all .3s;
+            top: -55px;
+            left: 50%;
+            transform: translateX(135px);
+            display: none;
+
+            @media(min-width: 1024px) {
+                display: block;
+            }
+        }
+
+        span {
             background-image: url("../src/img/btn1.svg");
             animation: shadow  1.5s infinite ease-in-out;
 
             &:hover {
-                
+                animation-play-state: paused;
             }
         }
 
-        &-yes {
+    }
+
+    &__link-yes {
+
+        .game__help-yes {
+            content: "";
+            width: 350px;
+            height: 84px;
+            background-image: url("../src/img/consult.svg");
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: all .3s;
+            top: -55px;
+            left: 50%;
+            transform: translateX(-480px);
+            display: none;
+
+            @media(min-width: 1024px) {
+                display: block;
+            }
+        }
+
+        span{
             background-image: url("../src/img/btn2.svg");
             animation: shadow2  1.5s infinite ease-in-out;
 
-            &::before {
-                content: "";
-                width: 400px;
-                height: 100px;
-                background-image: url("../src/img/consult.svg");
+            &:hover {
+                animation-play-state: paused;
             }
-        }
-
-        &:hover {
-            animation-play-state: paused;
         }
     }
 
@@ -205,6 +251,10 @@ main {
             display: flex;
             justify-content: space-between;
         }
+
+        @media(min-width: 1200px) {
+            justify-content: space-between;
+        }
     }
 
     .links {
@@ -256,7 +306,7 @@ main {
         margin-bottom: 20px;
 
         @media(min-width: 1200px){
-            font-size: 28px;
+            font-size: 20px;
             width: 33%;
         }
     }
@@ -270,7 +320,7 @@ main {
             color: #000;
 
             @media(min-width: 1200px){
-                font-size: 26px;
+                font-size: 20px;
                 width: 30%;
             }
             
@@ -278,6 +328,7 @@ main {
 
         @media(min-width: 1200px){
             width: 30%;
+            text-align: right;
         }
     }
 
@@ -301,8 +352,13 @@ main {
                 font-size: 20px;
 
                 @media(min-width: 1200px){
-                    font-size: 26px;
+                    font-size: 20px;
+                    margin-left: auto;
                 }
+            }
+            
+            @media(min-width: 1200px){
+                margin-left: auto;
             }
         }
 
@@ -320,7 +376,7 @@ main {
 
             @media(min-width: 1200px) {
                 padding-left: 25px;
-                padding-right: 230px;
+                padding-right: 225px;
             }
 
             a {
@@ -508,5 +564,26 @@ main {
 
     @media(min-width: 1200px) {
         font-size: 28px;
+    }
+
+    
+    input {
+        background-image: url("../src/img/ok.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 65px;
+        height: 50px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        margin-left: auto;
+        display: block;
+        margin-top: -15px;
+        cursor: pointer;
+
+        @media(min-width: 1200px) {
+            margin-top: -40px;
+        }
     }
 }

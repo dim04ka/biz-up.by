@@ -89,7 +89,7 @@ main {
     }
         }
 
-.game__link {
+.game__link span {
         width: 200px;
         height: 50px;
         display: block;
@@ -108,37 +108,82 @@ main {
 
 @media(min-width: 768px) {
 
-    .game__link {
+    .game__link span {
             font-size: 1.375rem;
             width: 210px;
             padding: 0 10px
     }
         }
 
-.game__link-no {
+.game__link {
+        position: relative;
+    }
+
+.game__link-no .game__help-no {
+            content: "";
+            width: 225px;
+            height: 80px;
+            background-image: url("../src/img/brif.svg");
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: all .3s;
+            top: -55px;
+            left: 50%;
+            transform: translateX(135px);
+            display: none
+        }
+
+@media(min-width: 1024px) {
+
+        .game__link-no .game__help-no {
+                display: block
+        }
+            }
+
+.game__link-no span {
             background-image: url("../src/img/btn1.svg");
             animation: shadow  1.5s infinite ease-in-out
         }
 
-.game__link-no:hover {
-                
+.game__link-no span:hover {
+                animation-play-state: paused;
             }
 
-.game__link-yes {
+.game__link-yes .game__help-yes {
+            content: "";
+            width: 350px;
+            height: 84px;
+            background-image: url("../src/img/consult.svg");
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: all .3s;
+            top: -55px;
+            left: 50%;
+            transform: translateX(-480px);
+            display: none
+        }
+
+@media(min-width: 1024px) {
+
+        .game__link-yes .game__help-yes {
+                display: block
+        }
+            }
+
+.game__link-yes span{
             background-image: url("../src/img/btn2.svg");
             animation: shadow2  1.5s infinite ease-in-out
         }
 
-.game__link-yes::before {
-                content: "";
-                width: 400px;
-                height: 100px;
-                background-image: url("../src/img/consult.svg");
+.game__link-yes span:hover {
+                animation-play-state: paused;
             }
-
-.game__link:hover {
-            animation-play-state: paused;
-        }
 
 .game__wrap {
         position: relative;
@@ -216,6 +261,13 @@ main {
     }
         }
 
+@media(min-width: 1200px) {
+
+    .footer__nav {
+            justify-content: space-between
+    }
+        }
+
 .footer .links {
         display: flex;
         justify-content: space-around;
@@ -272,7 +324,7 @@ main {
 @media(min-width: 1200px){
 
     .footer__adress  {
-            font-size: 1.75rem;
+            font-size: 1.25rem;
             width: 33%
     }
         }
@@ -291,7 +343,7 @@ main {
 @media(min-width: 1200px){
 
         .footer__email a {
-                font-size: 1.625rem;
+                font-size: 1.25rem;
                 width: 30%
             
         }
@@ -300,7 +352,8 @@ main {
 @media(min-width: 1200px){
 
     .footer__email {
-            width: 30%
+            width: 30%;
+            text-align: right
     }
         }
 
@@ -331,9 +384,17 @@ main {
 @media(min-width: 1200px){
 
             .footer__copyr .copyr__tel a {
-                    font-size: 1.625rem
+                    font-size: 1.25rem;
+                    margin-left: auto
             }
                 }
+
+@media(min-width: 1200px){
+
+        .footer__copyr .copyr__tel {
+                margin-left: auto
+        }
+            }
 
 .footer__copyr .copyr__text {
             color: #000;
@@ -352,7 +413,7 @@ main {
 
         .footer__copyr .copyr__icon {
                 padding-left: 25px;
-                padding-right: 230px
+                padding-right: 225px
 
         }
             }
@@ -548,6 +609,30 @@ main {
         font-size: 1.75rem
 }
     }
+
+.reviews input {
+        background-image: url("../src/img/ok.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 65px;
+        height: 50px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        margin-left: auto;
+        display: block;
+        margin-top: -15px;
+        cursor: pointer
+    }
+
+@media(min-width: 1200px) {
+
+    
+    .reviews input {
+            margin-top: -40px
+    }
+        }
 
 @font-face {
     font-family: Determination;
